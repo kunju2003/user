@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>adminhome</title>
+    <style>
+        body{
+            background-color: rgb(232, 232, 243);
+            margin: 5px;
+            border: 2px solid black;
+        }
+        .navbar{
+            display: flex;
+            /* justify-content: space-between; */
+            background-color: rgb(83, 152, 190);
+        }
+        .logo{
+            /* background-color: red; */
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            font-weight: 600;
+        }
+        .services{
+            /* background-color: yellow; */
+            flex: 3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .searchbar{
+            /* background-color: green; */
+            flex: 2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .services ul{
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            list-style-type: none;
+        }
+        .home{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">ADMINHOME</div>
+        <div class="searchbar"><input type="text" name="" placeholder="search" id=""></div>
+        <div class="services">
+            <ul>
+                <li><a class="home" href="../">Home</a></li>
+                <li>Contact</li>
+                <li>About</li>
+            </ul>
+        </div>
+    </div>
+    <div class="users">
+        <h1>USERS</h1>
+    </div>
+    <div class="main">
+        {% for i in user %}
+        <div class="profile1" style="border :1px solid black; margin: 5px;">
+            <div class="login1">
+                <h2>PROFILE</h2>
+                <p>username : {{i.first_name}}</p>
+            
+            </div>
+        </div>
+        {% endfor %}
+        <a href="../adminlogout">logout</a>
+    </div>
+</body>
+</html>

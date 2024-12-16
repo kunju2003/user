@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <a href="../admin"></a>
+    <div class="container">
+        <div class="left-section">
+            <div class="logo">
+                <h1>BACKGROUND</h1>
+                <p>vector Design</p>
+            </div>
+        </div>
+        <div class="right-section">
+            <div class="login form">
+                <h2>Admin Login</h2>
+<form action="../adminlog" method="post">
+    {% csrf_token %}
+    
+        
+    <div class="input-field">
+        <label for="name">Username</label>
+        <input type="text" id="name" name="name"  placeholder="Enter your name">
+        </div>
+        
+        <div class="input-field"><label for="password">Password</label>
+        <input type="password" id="password" name="password"  pattern="^[A-Z][a-zA-Z0-9!@#$%^&*_+\-?/]{7,}$" placeholder="Enter your password">
+    </div>
+    
+        <button type="submit" class="login-button">Login</button>
+            </form>
+        </div>
+        </div>
+        </div>
+</body>
+</html>
